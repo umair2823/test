@@ -1,0 +1,76 @@
+Question 7:
+#⁠Write a function to generate the Fibonacci sequence up to n terms using a loop.
+nterms = int(input("How many terms? "))
+
+# first two terms
+n1, n2 = 0, 1
+count = 0
+while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
+
+Question 8:
+# for loop it works like a list or string
+for k in range(0,200):
+  print(k+1)
+# while loop it work until the condition become ture
+count = 1
+while True:
+    print(count)
+    count += 1
+    if count > 5:  
+        break
+
+#  in do while loop if the condition is true then loop while work
+
+Question 9:
+# Given a list of integers, write a function to find the second largest number without using built-in functions like sorted().
+def second_largest(numbers):
+    first = 0
+    second = 0
+    for n in numbers:
+        if n > first:
+            first, second = n, first
+        elif first > n > second:
+            second = n
+    return second or None
+print(second_largest([1,5,3,7,-2]))
+
+Question 10:
+#Write a Python function that removes all duplicate elements from a list while maintaining the order of elements.
+def my_function(x):
+  return list(dict.fromkeys(x))
+
+mylist = my_function(["a", "b", "a", "c", "c"])
+
+print(mylist)
+
+Question 11:
+n=int(input("Enter a number"))
+def factoorial(n):
+        if (n==1 or n==0):
+            return 1
+        else:
+            return n*factoorial(n-1)
+print(f"The Factorial of {n} is : {factoorial(n)}")
+Question 12:
+#Explain and demonstrate the use of Python decorators, including a custom decorator that measures the execution time of a function.
+def boy (ab):
+    def mab ():
+        print('i am a boy')
+        ab()
+        print('i am a good boy')
+    return(mab)
+@boy
+def hello():
+    print('Hello boy')
+hello()
+
+Question 13:
+file = open("main.py", "w")
+file.write("Hello, World!")
+file.close()
